@@ -19,7 +19,7 @@ def Widgets():
     destination_label.configure(font=fontExample)
     destination_label.grid(row=2,column=0,pady=5,padx=5)
 
-    
+  
     root.linkText = Entry(root,width=55,textvariable=video_Link)
     root.linkText.grid(row=1,column=1,pady=5,columnspan=2)
 
@@ -44,7 +44,7 @@ def Downdload():
 
   getVideo = YouTube(Youtube_link)
   #mp4files = getVideo.filter('mp4')
-  #mp4files[-1].extension,mp4files[-1].resolution#
+  #mp4files[-1].extension,mp4files[-1].resolution
  
   videoStream = getVideo.streams.filter(progressive=True, file_extension='mp4')\
   .order_by('resolution').first()
